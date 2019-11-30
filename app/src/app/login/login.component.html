@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Hito Login</title>
+</head>
+
+<body>
+  <form class="login-box" (ngSubmit)="onLogin(frmLogin)">
+    <h1>Login</h1>
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+      <input type="text" placeholder="Email" name="email" value="" ngModel required>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Password" name="password" value="" ngModel required>
+    </div>
+    <input class="btn" type="submit" value="Send">
+    <div>
+      <p class="Nr">Not a user yet?Registerrrr</p>
+    </div>
+  </form>
+</body>
+
+</html>
