@@ -7,7 +7,7 @@
 
 <body>
     <form #frmRegister="ngForm" class="login-box" (ngSubmit)="onRegister(frmRegister)">
-        <h1>Login</h1>
+        <h1>Register</h1>
         <div class="textbox">
             <i class="fas fa-user"></i>
             <input type="text" placeholder="Email" name="email" value="" ngModel required>
@@ -30,7 +30,7 @@
         </div>
         <input class="btn" type="submit" value="Send">
         <div>
-            <p>Have you already created an account?<a href="../login/login.component.html">Log in</a></p>
+            <p>Have you already created an account?<a routerLink="../login">Log in</a></p>
         </div>
     </form>
 </body>
