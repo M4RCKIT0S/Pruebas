@@ -10,11 +10,13 @@ import { BookI } from '../Models/book.model';
 })
 export class LoggedComponent implements OnInit {
 
+  public books =[];
   constructor(private Services: ServicesService, private router:Router) { }
-  book: BookI;
   ngOnInit() {
+    this.Services.getBooks()
+    .subscribe( data => this.books = data);
   }
-  showInfo(){
+  /*showInfo(){
     this.Services.getBooks()
     .subscribe((data: BookI) => this.book = { 
       titulo: (data as any).titulo,
@@ -25,4 +27,5 @@ export class LoggedComponent implements OnInit {
       editorial: (data as any).editorial,
     });
     }
+    */
 }

@@ -25,8 +25,8 @@ export class ServicesService {
         this.login(data);
         }))
     }
-    getBooks(){
-      return this.http.get<BookI>('http://localhost:3000/');
+    getBooks():Observable<BookI[]>{
+      return this.http.get<BookI[]>('http://localhost:3000/');
     }
     logout() {
       localStorage.removeItem('acces_token');

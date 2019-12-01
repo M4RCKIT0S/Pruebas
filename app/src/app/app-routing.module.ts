@@ -7,6 +7,7 @@ import { LoggedComponent } from './logged/logged.component';
 
 
 const routes: Routes = [
+  { path:'', redirectTo: 'login', pathMatch: 'full'},
   { path:'login' , component: LoginComponent },
   { path: 'register', component:RegisterComponent},
   { path: 'logged', canActivate:[AuthGuard], component: LoggedComponent},
