@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../services/services.service';
-import { Router } from '@angular/router';
+import { Router, Data } from '@angular/router';
 import { BookI } from '../Models/book.model';
 
 @Component({
@@ -14,8 +14,12 @@ export class LoggedComponent implements OnInit {
   constructor(private Services: ServicesService, private router:Router) { }
   ngOnInit() {
     this.Services.getBooks()
-    .subscribe( data => this.books = data);
+    .subscribe(data => {
+      this.books = data;
+      console.log(this.books);
+    });
   }
+
   /*showInfo(){
     this.Services.getBooks()
     .subscribe((data: BookI) => this.book = { 

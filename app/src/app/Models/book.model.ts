@@ -1,4 +1,5 @@
 export interface BookI {
+    id: string,
     titulo:  string, 
   ISBN: string,
   descripcion: string,
