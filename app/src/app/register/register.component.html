@@ -1,1 +1,38 @@
-<p>register works!</p>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hito Login</title>
+</head>
+
+<body>
+    <form #frmRegister="ngForm" class="login-box" (ngSubmit)="onRegister(frmRegister)">
+        <h1>Login</h1>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Email" name="email" value="" ngModel required>
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" value="" ngModel required>
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="name" placeholder="Name" name="name" value="" ngModel required>
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="surname" placeholder="Surname" name="surname" value="" ngModel required>
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="phone" placeholder="Phone" name="phone" value="" ngModel required>
+        </div>
+        <input class="btn" type="submit" value="Send">
+        <div>
+            <p>Have you already created an account?<a href="../login/login.component.html">Log in</a></p>
+        </div>
+    </form>
+</body>
+
+</html>

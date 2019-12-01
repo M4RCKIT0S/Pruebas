@@ -7,17 +7,21 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesService } from './services/services.service';
+import { FormsModule } from '@angular/forms';
+import { LoggedComponent } from './logged/logged.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoggedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [ ServicesService],
   bootstrap: [AppComponent]

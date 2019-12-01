@@ -11,6 +11,9 @@ export class ServicesService {
   private token: string;
   constructor(private http: HttpClient) { }
     login(data) {
+      return this.http.post('http://localhost:3000/login', data)
+    }
+    register(data){
       return this.http.post(this.apiUrl, data)
     }
 }
