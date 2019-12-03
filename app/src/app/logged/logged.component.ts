@@ -12,6 +12,7 @@ export class LoggedComponent implements OnInit {
 
   public books =[];
   constructor(private Services: ServicesService, private router:Router) { }
+  filterBook='';
   ngOnInit() {
     this.Services.getBooks()
     .subscribe(data => {

@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService: ServicesService, private router:Router ) { }
 
   ngOnInit() {
+    document.body.classList.add('bodyLogin');
   }
   onLogin(form): void{
     this.authService.login(form.value).subscribe(res =>{

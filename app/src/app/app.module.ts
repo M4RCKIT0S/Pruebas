@@ -11,13 +11,15 @@ import { FormsModule } from '@angular/forms';
 import { LoggedComponent } from './logged/logged.component';
 import { AuthGuard } from './auth.guard';
 import { JwtModule } from '@auth0/angular-jwt';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    LoggedComponent
+    LoggedComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
